@@ -1,0 +1,46 @@
+{
+  "version": 6,
+  "configurePresets": [
+    {
+      "name": "debug",
+      "displayName": "Debug",
+      "generator": "Ninja",
+      "binaryDir": "build-dir/debug",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Debug",
+        "CMAKE_CXX_FLAGS":"-std=c++23 -O0 -g -Wall -fcolor-diagnostics -fdiagnostics-absolute-paths -fvisibility=hidden -Wno-deprecated -Wno-inconsistent-missing-override -Wno-overloaded-virtual -Wno-unused-local-typedef -Wundefined-inline -Wno-unused-function -fno-omit-frame-pointer -march=native -mtune=native"
+      }
+    },
+    {
+      "name": "release",
+      "displayName": "Release",
+      "generator": "Ninja",
+      "binaryDir": "build-dir/release",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Release",
+        "CMAKE_CXX_FLAGS": "-std=c++23 -O3 -g -Wall -fcolor-diagnostics -fdiagnostics-absolute-paths -fvisibility=hidden -Wno-deprecated -Wno-inconsistent-missing-override -Wno-overloaded-virtual -Wno-unused-local-typedef -Wundefined-inline -fno-omit-frame-pointer -march=native -mtune=native"
+      }
+    },
+    {
+      "name": "gcc-release",
+      "displayName": "GCC Release",
+      "generator": "Ninja",
+      "binaryDir": "build-dir/gcc-release",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Release",
+        "CMAKE_CXX_FLAGS": "-std=c++23 -O3 -g -Wall -fdiagnostics-color -fno-omit-frame-pointer -march=native -mtune=native"
+      }
+    },
+    {
+      "name": "arm-release",
+      "displayName": "ARM Release",
+      "generator": "Ninja",
+      "binaryDir": "build-dir/arm-release",
+      "toolchainFile": "~/cmake-toolchain/arm-linux-aarch64-clang.cmake",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Release",
+        "CMAKE_CXX_FLAGS": "-std=c++23 -O0 -g -Wall -fcolor-diagnostics -fdiagnostics-absolute-paths -fvisibility=hidden -Wno-deprecated -Wno-inconsistent-missing-override -Wno-overloaded-virtual -Wno-unused-local-typedef -Wundefined-inline -fno-omit-frame-pointer"
+      }
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+Diagnostics:
+  UnusedIncludes: Strict
+  ClangTidy:
+    FastCheckFilter: Strict
+    Add: [modernize*,readability*]
+    Remove: [clang-diagnostic-*,modernize-use-trailing-return-type,modernize-avoid-bind,modernize-return-braced-init-list,modernize-use-bool-literals,modernize-use-default-member-init,modernize-use-emplace,modernize-use-nullptr,modernize-use-override,readability-identifier-length,readability-braces-around-statements,readability-magic-numbers,readability-uppercase-literal-suffix,readability-static-definition-in-anonymous-namespace,readability-function-cognitive-complexity,readability-isolate-declaration,readability-math-missing-parentheses]
+    CheckOptions:
+      readability-implicit-bool-conversion.AllowPointerConditions: True

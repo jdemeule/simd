@@ -1,0 +1,55 @@
+---
+BasedOnStyle: "Google"
+IndentWidth: 3
+UseTab: "Never"
+Language: "Cpp"
+AllowShortBlocksOnASingleLine: "false"
+AllowShortFunctionsOnASingleLine: "Empty"
+AlignAfterOpenBracket: "Align"
+AllowShortIfStatementsOnASingleLine: "false"
+AllowAllParametersOfDeclarationOnNextLine: "true"
+AllowShortLoopsOnASingleLine: "false"
+AccessModifierOffset: -3
+AlwaysBreakTemplateDeclarations: "true"
+ConstructorInitializerIndentWidth: 3
+ConstructorInitializerAllOnOneLineOrOnePerLine: "false"
+BreakConstructorInitializersBeforeComma: "true"
+Standard: "Cpp11"
+PointerAlignment: "Left"
+DerivePointerAlignment: "false"
+AlignConsecutiveDeclarations: "false"
+AlignConsecutiveAssignments: "false"
+ColumnLimit: 90
+ContinuationIndentWidth: 3
+KeepEmptyLinesAtTheStartOfBlocks: "true"
+MaxEmptyLinesToKeep: 3
+BreakBeforeBraces: "Custom"
+BraceWrapping:
+    AfterClass: "false"
+    AfterControlStatement : "false"
+    AfterFunction: "false"
+    AfterNamespace: "false"
+    AfterStruct: "false"
+    AfterUnion: "false"
+    BeforeCatch: "true"
+    BeforeElse: "true"
+    IndentBraces: "false"
+BinPackArguments: "true"
+BinPackParameters: "true"
+ExperimentalAutoDetectBinPacking: "true"
+IndentCaseLabels: false
+ReflowComments: true
+IncludeBlocks: Regroup
+IncludeCategories:
+  # Headers in <> from specific external libraries.
+  - Regex:           '<(simd)\/'
+    Priority:        2
+  # Headers in <> without extension.
+  - Regex:           '<([A-Za-z0-9\Q/-_\E])+>'
+    Priority:        3
+  # Headers in <> with extension.
+  - Regex:           '<([A-Za-z0-9.\Q/-_\E])+>'
+    Priority:        4
+  # Headers in "" with extension.
+  - Regex:           '"([A-Za-z0-9.\Q/-_\E])+"'
+    Priority:        5

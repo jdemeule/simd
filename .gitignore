@@ -1,0 +1,6 @@
+.DS_Store
+.vscode
+build-dir/
+.cache
+compile_commands.json
+Launch_*
